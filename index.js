@@ -16,6 +16,7 @@ function showSectionById(id) {
     document.getElementById('history-section').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
 }
+
 // Donate Now button
 
 // Noakhali
@@ -25,16 +26,22 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
 
     if (addAmount < 0 || isNaN(addAmount)) {
         alert('Failed To Add Money');
+        return;
     }
 
     else {
         const balance = getTextFieldValueById('account-balance');
         const mainBalance = getTextFieldValueById('account-main-balance');
+
+        if (addAmount > mainBalance) {
+            alert('You do not have enough money to Donation');
+            return;
+        }
+
         const newBalance = balance + addAmount;
         const newMainBalance = mainBalance - addAmount;
         document.getElementById('account-balance').innerText = newBalance + ' BDT';
         document.getElementById('account-main-balance').innerText = newMainBalance + ' BDT';
-
 
         const h2 = document.createElement('h2');
         h2.innerText = `${addAmount} Taka is Donated for famine-2024 at Feni, Bangladesh`;
@@ -54,11 +61,18 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 
     if (addAmount < 0 || isNaN(addAmount)) {
         alert('Failed To Add Money');
+        return;
     }
 
     else {
         const balance = getTextFieldValueById('account-balance-feni');
         const mainBalance = getTextFieldValueById('account-main-balance');
+
+        if (addAmount > mainBalance) {
+            alert('You do not have enough money to Donation');
+            return;
+        }
+
         const newBalance = balance + addAmount;
         const newMainBalance = mainBalance - addAmount;
         document.getElementById('account-balance-feni').innerText = newBalance + ' BDT';
@@ -82,11 +96,18 @@ document.getElementById('btn-donate-quoata').addEventListener('click', function 
 
     if (addAmount < 0 || isNaN(addAmount)) {
         alert('Failed To Add Money');
+        return;
     }
 
     else {
         const balance = getTextFieldValueById('account-balance-quoata');
         const mainBalance = getTextFieldValueById('account-main-balance');
+
+        if (addAmount > mainBalance) {
+            alert('You do not have enough money to Donation');
+            return;
+        }
+
         const newBalance = balance + addAmount;
         const newMainBalance = mainBalance - addAmount;
         document.getElementById('account-balance-quoata').innerText = newBalance + ' BDT';
@@ -102,6 +123,7 @@ document.getElementById('btn-donate-quoata').addEventListener('click', function 
     }
 
 })
+
 
 // Toggle Button
 document.getElementById('donation-btn').addEventListener('click', function () {
