@@ -1,4 +1,4 @@
-// Common Shared Function Start
+// Common Shared Functions
 function getInputFieldById(id) {
     const inputValue = document.getElementById(id).value;
     const inputNumber = parseFloat(inputValue);
@@ -17,8 +17,7 @@ function showSectionById(id) {
     document.getElementById(id).classList.remove('hidden');
 }
 
-// Donate Now button
-
+// Donate Now button functionality
 // Noakhali
 document.getElementById('btn-donate').addEventListener('click', function (event) {
     event.preventDefault();
@@ -53,7 +52,6 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
     }
 
 })
-
 // Feni
 document.getElementById('btn-donate-feni').addEventListener('click', function (event) {
     event.preventDefault();
@@ -88,7 +86,6 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
     }
 
 })
-
 // Quota
 document.getElementById('btn-donate-quoata').addEventListener('click', function (event) {
     event.preventDefault();
@@ -124,12 +121,10 @@ document.getElementById('btn-donate-quoata').addEventListener('click', function 
 
 })
 
-
 // Toggle Button
 document.getElementById('donation-btn').addEventListener('click', function () {
     showSectionById('donation-form');
 })
-
 document.getElementById('history-btn').addEventListener('click', function () {
     showSectionById('history-section');
 })
@@ -137,7 +132,6 @@ document.getElementById('history-btn').addEventListener('click', function () {
 // Button Functionality
 const donationTab = document.getElementById('donation-btn');
 const historyTab = document.getElementById('history-btn');
-
 historyTab.addEventListener('click', function () {
     historyTab.classList.add('bg-buttonBg', 'text-black', 'font-semibold');
     historyTab.classList.remove('btn-outline');

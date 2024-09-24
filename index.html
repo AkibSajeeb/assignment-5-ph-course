@@ -102,7 +102,8 @@
                                 class="font-light border rounded p-4 w-full mb-8">
                             <br>
                             <button id="btn-donate"
-                                class="btn bg-buttonBg text-textColor px-8 py-4 font-semibold w-full">Donate
+                                class="btn bg-buttonBg text-textColor px-8 py-4 font-semibold w-full"
+                                onclick="my_modal_1.showModal()">Donate
                                 Now</button>
                         </form>
                     </div>
@@ -137,7 +138,8 @@
                                 class="font-light border rounded p-4 w-full mb-8">
                             <br>
                             <button id="btn-donate-feni"
-                                class="btn bg-buttonBg text-textColor px-8 py-4 font-semibold w-full">Donate
+                                class="btn bg-buttonBg text-textColor px-8 py-4 font-semibold w-full"
+                                onclick="my_modal_1.showModal()">Donate
                                 Now</button>
                         </form>
                     </div>
@@ -176,7 +178,8 @@
                                 class="font-light border rounded p-4 w-full mb-8">
                             <br>
                             <button id="btn-donate-quoata"
-                                class="btn bg-buttonBg text-textColor px-8 py-4 font-semibold w-full">Donate
+                                class="btn bg-buttonBg text-textColor px-8 py-4 font-semibold w-full"
+                                onclick="my_modal_1.showModal()">Donate
                                 Now</button>
                         </form>
                     </div>
@@ -184,6 +187,7 @@
             </div>
         </section>
 
+        <!-- transaction history -->
         <section id="history-section" class="hidden w-full lg:w-10/12 mx-auto mt-8 mb-10">
 
             <div id="history-container-noakhali" class="border p-5 rounded-2xl mb-5">
@@ -195,6 +199,22 @@
             <div id="history-container-quota" class="border p-5 rounded-2xl mb-5"></div>
 
         </section>
+
+        <!-- modal -->
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box flex flex-col justify-center items-center">
+                <h3 class="text-3xl font-bold pb-2">Congrates!</h3>
+                <img class="w-1/12 py-2" src="./assets/coin.png" alt="coin">
+                <p class="py-4 text-base font-light">You have donated for humankind</p>
+                <h4 class="text-lg font-semibold">Successfully</h4>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn">close confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
     </main>
 
     <footer>
