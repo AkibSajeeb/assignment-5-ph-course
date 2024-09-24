@@ -133,3 +133,21 @@ document.getElementById('donation-btn').addEventListener('click', function () {
 document.getElementById('history-btn').addEventListener('click', function () {
     showSectionById('history-section');
 })
+
+// Button Functionality
+const donationTab = document.getElementById('donation-btn');
+const historyTab = document.getElementById('history-btn');
+
+historyTab.addEventListener('click', function () {
+    historyTab.classList.add('bg-buttonBg', 'text-black', 'font-semibold');
+    historyTab.classList.remove('btn-outline');
+    donationTab.classList.remove('bg-buttonBg');
+    donationTab.classList.add('btn-outline', 'text-textSecondary');
+
+    donationTab.addEventListener('click', function () {
+        donationTab.classList.add('bg-buttonBg', 'text-black', 'font-semibold');
+        donationTab.classList.remove('btn-outline');
+        historyTab.classList.remove('bg-buttonBg');
+        historyTab.classList.add('btn-outline', 'text-textSecondary');
+    })
+})
