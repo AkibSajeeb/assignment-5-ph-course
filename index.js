@@ -10,7 +10,8 @@ function getTextFieldValueById(id) {
     const inputNumber = parseFloat(inputValue);
     return inputNumber;
 }
-// Common Shared Function End
+
+// Donate Now button
 
 // Noakhali
 document.getElementById('btn-donate').addEventListener('click', function (event) {
